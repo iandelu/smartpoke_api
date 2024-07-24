@@ -1,6 +1,3 @@
-[submodule "smartpoke_api"]
-	path = smartpoke_api
-	url = https://github.com/iandelu/smartpoke_api.git
 [submodule "recipe_webservice"]
 	path = recipe_webservice
 	url = https://github.com/iandelu/recipe_webservice.git
