@@ -22,14 +22,6 @@ services:
     build: ./recipe_webservice # Ruta a tu servicio de scraping de recetas
     image: recipe_scraper_image # Imagen de tu aplicación de scraping
     container_name: recipe_scraper_service
-    depends_on:
-      - postgres_db # Este servicio depende de postgres_db
-    ports:
-      - "8081:8081"
-    environment:
-      DB_URL: jdbc:postgresql://postgres_db:5432/postgres
-      DB_USER: postgres
-      DB_PASSWORD: smartpokeprod
 
   smartpoke_core:
     build: ./smartpoke_core/smartpoke.api # Ruta a tu servicio de smartpoke core
@@ -42,7 +34,7 @@ services:
       - "8082:8082"
     environment:
       DB_URL: jdbc:postgresql://postgres_db:5432/postgres
-      DB_USER: postgres
+      DB_USERNAME: postgres
       DB_PASSWORD: smartpokeprod
 
 volumes:
